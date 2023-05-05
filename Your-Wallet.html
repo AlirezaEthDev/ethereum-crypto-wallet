@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Crypto Wallet</title>
+        <link rel="stylesheet" href="Base-Style.css">
+    </head>
+    <body>
+        <ul id="horizontalBar">
+            <li class="horizontalItem">Network: <input id="connectedNetwork" list="networkList" size="30"></li>
+            <li class="horizontalItem">Chain ID:</li>
+            <li class="horizontalItem">Provider:</li>
+            <li class="horizontalItem">Default Account: <input id="walletAccount" list="walletAccountsList" size="50"></li>
+            <li class="horizontalItem">Balance:</li>
+            <li class="horizontalItem">Nonce:</li>
+        </ul>
+        <datalist id="networkList">
+            <option value="Ethereum Mainnet">
+            <option value="Ropsten (Test Network)">
+            <option value="Rinkeby (Test Network)">
+            <option value="Goerli (Test Network)">
+            <option value="Kovan (Test Network)">
+        </datalist>
+        <datalist id="walletAccountsList"></datalist>
+        <ul id="verticalBar">
+            <li class="verticalItem" id="createAccount"><a>Create Account</a></li>
+            <li class="verticalItem" id="addAccount"><a>Add Account</a></li>
+            <li class="verticalItem" id="deleteAccount"><a>Delete Account</a></li>
+            <li class="verticalItem" id="sendTransaction"><a>Send Transaction</a></li>
+            <li class="verticalItem" id="viewAccounts"><a>View Accounts</a></li>
+            <li class="verticalItem" id="viewNetwork"><a>View Network</a></li>
+            <li class="viewNetworkItem" id="availableNetworks"><a class="viewNetworkItem">Available Networks</a></li>
+            <li class="viewNetworkItem" id="sentTransactions" ><a class="viewNetworkItem">Sent Transactions</a></li>
+            <li class="viewNetworkItem" id="pendingTransactions"><a class="viewNetworkItem">Pending Transactions</a></li>
+            <li class="verticalItem" id="history"><a>History</a></li>
+            <li class="verticalItem" id="clearWallet"><a>Clear Wallet</a></li>
+            <li class="verticalItem" id="removeWallet"><a>Remove Wallet</a></li>
+            <li class="verticalItem" id="passwordReset"><a>Password Reset</a></li>
+            <li class="verticalItem" id="logOut"><a>Log Out</a></li>
+        </ul>
+        <script src="Your-Wallet-Bundle.js">
+                        
+        </script>
+    </body>
+</html>
