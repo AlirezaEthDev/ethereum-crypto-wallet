@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sent Transactions</title>
+        <link rel="stylesheet" href="Base-Style.css">
+        <style>
+            #searchBox{
+                padding: 10px;
+                text-align: center;
+                color: rgb(126, 126, 126);
+                font-size: large;
+                position: relative;
+                top: -500px;
+                left: 350px;
+            }
+            #searchButton{
+                padding: 10px;
+                font-size: large;
+                position: relative;
+                top: -500px;
+                left: 350px;
+            }
+            #txTable{
+                position: relative;
+                top: -470px;
+                visibility: hidden;
+            }
+            .fieldTitles{
+                border-right: 3px solid rgb(109,109,109);
+            }
+            .Values{
+                background-color: white;
+            }
+            #txStatusValue{
+                background-color: rgb(109,109,109);
+                color: white;
+                border-top: 3px solid rgb(109,109,109);
+            }
+            #moreDetails{
+                visibility: hidden;
+                font-size: larger;
+                padding: 15px;
+                position: relative;
+                top: -450px;
+                left: 710px ;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="horizontalBar">
+            <li class="horizontalItem">Network: <input id="connectedNetwork" list="networkList" size="30"></li>
+            <li class="horizontalItem">Chain ID:</li>
+            <li class="horizontalItem">Provider:</li>
+            <li class="horizontalItem">Default Account: <input id="walletAccount" list="walletAccountsList" size="50"></li>
+            <li class="horizontalItem">Balance:</li>
+            <li class="horizontalItem">Nonce:</li>
+        </ul>
+        <datalist id="networkList">
+            <option value="Ethereum Mainnet">
+            <option value="Ropsten (Test Network)">
+            <option value="Rinkeby (Test Network)">
+            <option value="Goerli (Test Network)">
+            <option value="Kovan (Test Network)">
+        </datalist>
+        <datalist id="walletAccountsList"></datalist>
+        <ul id="verticalBar">
+            <li class="verticalItem" id="createAccount"><a>Create Account</a></li>
+            <li class="verticalItem" id="addAccount"><a>Add Account</a></li>
+            <li class="verticalItem" id="deleteAccount"><a>Delete Account</a></li>
+            <li class="verticalItem" id="sendTransaction"><a>Send Transaction</a></li>
+            <li class="verticalItem" id="viewAccounts"><a>View Accounts</a></li>
+            <li class="verticalItem" id="viewNetwork"><a>View Network</a></li>
+            <li class="viewNetworkItem" id="availableNetworks"><a class="viewNetworkItem">Available Networks</a></li>
+            <li class="viewNetworkItem" id="sentTransactions" ><a class="viewNetworkItem">Sent Transactions</a></li>
+            <li class="viewNetworkItem" id="pendingTransactions"><a class="viewNetworkItem">Pending Transactions</a></li>
+            <li class="verticalItem" id="history"><a>History</a></li>
+            <li class="verticalItem" id="clearWallet"><a>Clear Wallet</a></li>
+            <li class="verticalItem" id="removeWallet"><a>Remove Wallet</a></li>
+            <li class="verticalItem" id="passwordReset"><a>Password Reset</a></li>
+            <li class="verticalItem" id="logOut"><a>Log Out</a></li>
+        </ul>
+        <input type="search" id="searchBox" name="SearchBox" maxlength="71" size="75" placeholder="Search by TX hash or (block hash or block height +:+TX index)"O>
+        <button type="button" id="searchButton" name="SearchButton">Explore</button>
+        <table id="txTable">
+            <tr>
+                <th class="fieldTitles">Timestamp</th>
+                <th id="timestampValue"></th>
+            </tr>
+            <tr >
+                <td class="fieldTitles">Block Hash</td>
+                <td id="blockHashValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Block Number</td>
+                <td id="blockNumberValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Chain ID</td>
+                <td id="chainIdValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Transaction Hash</td>
+                <td id="transactionHashValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Transaction Index</td>
+                <td id="transactionIndexValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">From</td>
+                <td id="fromValue" class="Values"></td>
+            </tr>
+            <tr >
+                <td class="fieldTitles">To</td>
+                <td id="toValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Value</td>
+                <td id="valueValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Gas Used</td>
+                <td id="gasUsedValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Gas Price</td>
+                <td id="gasPriceValue" class="Values"></td>
+            </tr>
+            <tr>
+                <td class="fieldTitles">Total Cost</td>
+                <td id="totalCostValue" class="Values"></td>
+            </tr><tr>
+                <td class="fieldTitles">Miner</td>
+                <td id="minerValue" class="Values"></td>
+            </tr>
+        </table>
+        <button id="moreDetails" name="MoreDetails">More Details</button>
+        <script src="Sent-Transactions-Bundle.js"></script>
+    </body>
+</html>
