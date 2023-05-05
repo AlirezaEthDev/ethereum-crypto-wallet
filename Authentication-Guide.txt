@@ -1,0 +1,4 @@
+برای ماژول‌های احراز هویت نگاه کن به:
+https://openbase.com/categories/js/best-nodejs-authentication-libraries
+
+https://docs.feathersjs.com/guides/basics/setup.html#what-we-will-do
