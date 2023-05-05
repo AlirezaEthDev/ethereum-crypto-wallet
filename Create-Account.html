@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Account</title>
+        <link rel="stylesheet" href="Base-Style.css">
+        <style>
+            input{
+                text-align: center;
+                color: rgb(126, 126, 126);
+                font-size: medium;
+            }
+            #addressPointer{
+                position: relative;
+                top: -500px;
+                left: 655px;
+            }
+            #createdAccountAddress{
+                position: relative;
+                top: -470px;
+                left: 420px;
+            }
+            #keyPointer{
+                position: relative;
+                top: -495px;
+                left: 645px;
+            }
+            #createdAccountKey{
+                position: relative;
+                top: -470px;
+                left: 295px;
+            }
+            #indexPointer{
+                position: relative;
+                top: -495px;
+                left: 665px;
+            }
+            #createdAccountIndex{
+                position: relative;
+                top: -470px;
+                left: 540px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="horizontalBar">
+            <li class="horizontalItem">Network: <input id="connectedNetwork" list="networkList" size="30"></li>
+            <li class="horizontalItem">Chain ID:</li>
+            <li class="horizontalItem">Provider:</li>
+            <li class="horizontalItem">Default Account: <input id="walletAccount" list="walletAccountsList" size="50"></li>
+            <li class="horizontalItem">Balance:</li>
+            <li class="horizontalItem">Nonce:</li>
+        </ul>
+        <datalist id="networkList">
+            <option value="Ethereum Mainnet">
+            <option value="Ropsten (Test Network)">
+            <option value="Rinkeby (Test Network)">
+            <option value="Goerli (Test Network)">
+            <option value="Kovan (Test Network)">
+        </datalist>
+        <datalist id="walletAccountsList"></datalist>
+        <ul id="verticalBar">
+            <li class="verticalItem" id="createAccount"><a>Create Account</a></li>
+            <li class="verticalItem" id="addAccount"><a>Add Account</a></li>
+            <li class="verticalItem" id="deleteAccount"><a>Delete Account</a></li>
+            <li class="verticalItem" id="sendTransaction"><a>Send Transaction</a></li>
+            <li class="verticalItem" id="viewAccounts"><a>View Accounts</a></li>
+            <li class="verticalItem" id="viewNetwork"><a>View Network</a></li>
+            <li class="viewNetworkItem" id="availableNetworks"><a class="viewNetworkItem">Available Networks</a></li>
+            <li class="viewNetworkItem" id="sentTransactions" ><a class="viewNetworkItem">Sent Transactions</a></li>
+            <li class="viewNetworkItem" id="pendingTransactions"><a class="viewNetworkItem">Pending Transactions</a></li>
+            <li class="verticalItem" id="history"><a>History</a></li>
+            <li class="verticalItem" id="clearWallet"><a>Clear Wallet</a></li>
+            <li class="verticalItem" id="removeWallet"><a>Remove Wallet</a></li>
+            <li class="verticalItem" id="passwordReset"><a>Password Reset</a></li>
+            <li class="verticalItem" id="logOut"><a>Log Out</a></li>
+        </ul>
+        <label for="createdAccountAddress" id="addressPointer">Address:</label>
+        <input type="text" id="createdAccountAddress" name="CreatedAccountAddress" size="45" readonly><br><br><br>
+        <label for="createdAccountKey" id="keyPointer">Private Key:</label>
+        <input type="text" id="createdAccountKey" name="CreatedAccountKey" size="70" readonly><br><br><br>
+        <label for="createdAccountIndex" id="indexPointer">Index:</label>
+        <input type="number" id="createdAccountIndex" name="CreatedAccountIndex" size="4" readonly>
+        <script src="Create-Account-Bundle.js"></script>
+    </body>
+</html>
