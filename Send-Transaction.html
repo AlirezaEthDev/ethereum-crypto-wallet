@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Send Transaction</title>
+        <link rel="stylesheet" href="Base-Style.css">
+        <style>
+            input{
+                text-align: center;
+                color: rgb(126, 126, 126);
+                font-size: large;
+            }
+            #from{
+                position: relative;
+                top: -500px;
+                left: 515px;
+            }
+            #fromPointer{
+                font-size: larger;
+                position: relative;
+                top: -498px;
+                left: 490px;
+            }
+            #to{
+                text-align: left;
+                position: relative;
+                top: -440px;
+                left: 8px;
+            }
+            #toPointer{
+                font-size: larger;
+                position: relative;
+                top: -437px;
+                left: -45px;
+            }
+            #ethValue{
+                position: relative;
+                top: -410px;
+                left: 687px;
+            }
+            #ethValuePointer{
+                font-size: larger;
+                position: relative;
+                top: -375px;
+                left: -552px;
+            }
+            #gas{
+                width: 30ch;
+                position: relative;
+                top: -345px;
+                left: 370px;
+            }
+            #gasPointer{
+                font-size: larger;
+                position: relative;
+                top: -342px;
+                left: 260px;
+            }
+            #gasPrice{
+                width: 30ch;
+                position: relative;
+                top: -285px;
+                left: -38px;
+            }
+            #gasPricePointer{
+                font-size: larger;
+                position: relative;
+                top: -282px;
+                left: -100px;
+            }
+            #totalCost{
+                width: 30.2ch;
+                position: relative;
+                top: -270px;
+                left: 649px;
+            }
+            #totalCostPointer{
+                font-size: larger;
+                position: relative;
+                top: -220px;
+                left: -510px;
+            }
+            #sendButton{
+                font-size: larger;
+                padding: 15px;
+                position: relative;
+                top: -195px;
+                left: 447px ;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="horizontalBar">
+            <li class="horizontalItem">Network: <input id="connectedNetwork" list="networkList" size="30"></li>
+            <li class="horizontalItem">Chain ID:</li>
+            <li class="horizontalItem">Provider:</li>
+            <li class="horizontalItem">Default Account: <input id="walletAccount" list="walletAccountsList" size="50"></li>
+            <li class="horizontalItem">Balance:</li>
+            <li class="horizontalItem">Nonce:</li>
+        </ul>
+        <datalist id="networkList">
+            <option value="Ethereum Mainnet">
+            <option value="Ropsten (Test Network)">
+            <option value="Rinkeby (Test Network)">
+            <option value="Goerli (Test Network)">
+            <option value="Kovan (Test Network)">
+        </datalist>
+        <datalist id="walletAccountsList"></datalist>
+        <ul id="verticalBar">
+            <li class="verticalItem" id="createAccount"><a>Create Account</a></li>
+            <li class="verticalItem" id="addAccount"><a>Add Account</a></li>
+            <li class="verticalItem" id="deleteAccount"><a>Delete Account</a></li>
+            <li class="verticalItem" id="sendTransaction"><a>Send Transaction</a></li>
+            <li class="verticalItem" id="viewAccounts"><a>View Accounts</a></li>
+            <li class="verticalItem" id="viewNetwork"><a>View Network</a></li>
+            <li class="viewNetworkItem" id="availableNetworks"><a class="viewNetworkItem">Available Networks</a></li>
+            <li class="viewNetworkItem" id="sentTransactions" ><a class="viewNetworkItem">Sent Transactions</a></li>
+            <li class="viewNetworkItem" id="pendingTransactions"><a class="viewNetworkItem">Pending Transactions</a></li>
+            <li class="verticalItem" id="history"><a>History</a></li>
+            <li class="verticalItem" id="clearWallet"><a>Clear Wallet</a></li>
+            <li class="verticalItem" id="removeWallet"><a>Remove Wallet</a></li>
+            <li class="verticalItem" id="passwordReset"><a>Password Reset</a></li>
+            <li class="verticalItem" id="logOut"><a>Log Out</a></li>
+        </ul>
+        <label id="fromPointer">From: </label>
+        <input type="text" list="accountsList" id="from" name="From" size="47">
+        <datalist id="accountsList"></datalist>
+        <label id="toPointer">To: </label>
+        <input type="text" id="to" name="To" size="47">
+        <label id="ethValuePointer">Value (in ETH): </label>
+        <input type="number" id="ethValue" name="EthValue" min="0" step="0.000000000000000001">
+        <label id="gasPointer">Gas: </label>
+        <input type="number" id="gas" name="Gas" min="0" step="1" placeholder="To estimation let here empty">
+        <label id="gasPricePointer">Gas Price:</label>
+        <input type="number" id="gasPrice" name="GasPrice" min="0" step="0.000000000000000001" placeholder="To estimation let here empty">
+        <label id="totalCostPointer">Total Cost: </label>
+        <input type="number" id="totalCost" name="TotalCost" readonly>
+        <button id="sendButton" name="sendButton">Send</button>
+        <script src="Send-Transaction-Bundle.js"></script>
+    </body>
+</html>
